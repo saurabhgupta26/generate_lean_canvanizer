@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background: rosybrown;
+  height: 100%;
+}
+.logo {
+  font-size: 2rem;
+  color: #8f2727;
+}
+.inner_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    // height: %;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  height: 80%;
+  border: 2px solid #130a89;
+  border-radius: 5px;
+}
+.grid {
+    margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "num2 num4 num5 num9 num1"
+    "num2 num7 num5 num6 num1 "
+    "num8 num8 num3 num3 num3";
+  column-gap: 10px;
+  row-gap: 10px;
+  p {
+      text-align: left;
+  }
+  padding: 20px;
+}
+p {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    opacity: 0.5;
+  }
+  
+.grid_last {
+    grid-template-columns: 49.6% 49.6%;
+    grid-template-areas: 
+    "num8 num3";
+    p {
+        text-align: right;
+    }
+}
+
+.grid > * {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.inner_container > * > :first-child {
+    font-size: 1.5rem;
+}
+.inner_container > * > h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.problem_section {
+  grid-area: num2;
+  background: #7433ab;
+}
+.solution_section {
+  grid-area: num4;
+  background: #f7921e;
+}
+.uvp_section {
+  grid-area: num5;
+  background: #419645;
+}
+.unfairAdv_section {
+  grid-area: num9;
+  background: #89c041;
+}
+.custSeg_section {
+  grid-area: num1;
+  background: #0092bb;
+}
+.keyMatrics_section {
+  grid-area: num7;
+  background: #e96a3f;
+}
+.channels_section {
+  grid-area: num6;
+  background: #01a89e;
+}
+.cost_section {
+  grid-area: num8;
+  background: #2652bf;
+}
+.revenueStreams_section {
+  grid-area: num3;
+  background: #106480;
+}
+
+
+.textfield {
+  text-align: center;
+  padding: 5px;
+}
+.side_button button {
+  width: 200px;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, red, rgb(230, 91, 17));
+  border-radius: 5px;
+  color:#0a893f;
+
+}
