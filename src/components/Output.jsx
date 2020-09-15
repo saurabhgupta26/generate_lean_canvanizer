@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { AiFillLock, AiFillTag } from "react-icons/ai";
 import { FaKey, FaGift, FaDollarSign } from "react-icons/fa";
