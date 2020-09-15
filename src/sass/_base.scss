@@ -10,6 +10,9 @@ body {
   background: #fff;
   height: 100%;
 }
+.container {
+    color: #fff;
+}
 .logo {
   font-size: 2rem;
   color: #8f2727;
@@ -17,7 +20,6 @@ body {
 .inner_container {
   max-width: 1200px;
   margin: 0 auto;
-  // height: %;
 }
 
 .container {
@@ -25,6 +27,7 @@ body {
   margin: 0 auto;
   height: 80%;
   border: 2px solid #130a89;
+  background: linear-gradient(to right,rgba(244, 100, 34, 0.809), #fff, rgba(59, 199, 31, 0.802));
   border-radius: 5px;
   padding: 10px;
 }
@@ -100,7 +103,7 @@ p {
   grid-area: num1;
   background: #0092bb;
 }
-.keyMatrics_section {
+.keyMetrics_section {
   grid-area: num7;
   background: #e96a3f;
 }

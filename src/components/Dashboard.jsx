@@ -15,7 +15,7 @@ function Dashboard(props) {
           handleExample={props.handleExample}
         />
         <Output
-          output={props.output}
+          // output={props.output}
           markdown={props.markdown}
           updatedJson={props.updatedJson}
         />

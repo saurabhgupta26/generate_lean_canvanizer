@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 function Markdown(props) {
-  console.log(props);
   return (
     <div className="flex">
       <div className="input_window">
