@@ -7,6 +7,7 @@ import { IoMdColorWand } from "react-icons/io";
 import { ImEnlarge, ImUser } from "react-icons/im";
 
 function Output(props) {
+  console.log();
   return (
     <>
       <div className="container">
@@ -14,13 +15,53 @@ function Output(props) {
           <div className="problem_section">
             <AiFillLock />
             <h3> PROBLEM</h3>
-            <h2>{props.output}</h2>
-            <p>2</p>
+            <h2>
+              {props.updatedJson && props.updatedJson["Lean Canvas"].Problem
+                ? props.updatedJson["Lean Canvas"].Problem.raw
+                : "N/A"}
+              <br />
+              <p>2</p>
+              <h4> Existing Alternatives </h4>
+              <br />
+              {props.updatedJson &&
+              props.updatedJson["Lean Canvas"] &&
+              props.updatedJson["Lean Canvas"].Problem &&
+              props.updatedJson["Lean Canvas"].Problem[
+                "Existing Alternatives"
+              ] &&
+              props.updatedJson["Lean Canvas"].Problem["Existing Alternatives"]
+                .raw
+                ? props.updatedJson["Lean Canvas"].Problem[
+                    "Existing Alternatives"
+                  ].raw
+                : "N/A"}
+            </h2>
           </div>
+
           <div className="solution_section">
             <FaKey />
             <h3>SOLUTION</h3>
-            <p>4</p>
+            <h2>
+              {props.updatedJson && props.updatedJson["Lean Canvas"].Solution
+                ? props.updatedJson["Lean Canvas"].Solution.raw
+                : "N/A"}
+              <br />
+              <p>4</p>
+              <h4> Existing Alternatives </h4>
+              <br />
+              {props.updatedJson &&
+              props.updatedJson["Lean Canvas"] &&
+              props.updatedJson["Lean Canvas"].Solution &&
+              props.updatedJson["Lean Canvas"].Solution[
+                "Existing Alternatives"
+              ] &&
+              props.updatedJson["Lean Canvas"].Solution["Existing Alternatives"]
+                .raw
+                ? props.updatedJson["Lean Canvas"].Solution[
+                    "Existing Alternatives"
+                  ].raw
+                : "N/A"}
+            </h2>
           </div>
           <div className="keyMatrics_section">
             <FiBarChart2 />
@@ -60,6 +101,11 @@ function Output(props) {
             <p>3</p>
           </div>
         </div>
+        <h2>Content from output</h2>
+        {/* {props.markdown} ? <Convert>{props.markdown}</Convert> :{" "} */}
+        {/* <Marked> ##Hello </Marked> */}
+        {/* <Marked> # Hello world!</Marked> */}
+        <h1>No data here</h1>
       </div>
     </>
   );

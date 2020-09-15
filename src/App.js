@@ -4,6 +4,7 @@ import Markdown from "./components/Markdown.jsx";
 import Output from "./components/Output.jsx";
 import Error from "./components/Error.jsx";
 import Dashboard from "./components/Dashboard.jsx";
+import md2json from "md-2-json";
 
 class App extends Component {
   constructor(props) {
@@ -11,11 +12,13 @@ class App extends Component {
     this.state = {
       markdown: "",
       output: "",
+      json: "",
     };
   }
   handleInput = ({ target: { name, value } }) => {
     console.log("reached in input");
-    this.setState({ markdown : value });
+    this.setState({ markdown: value });
+    this.setState({ json: md2json.parse("# Lean Canvas\n\n" + value) });
   };
 
   handleExample = () => {
@@ -70,6 +73,7 @@ class App extends Component {
                 handleExample={this.handleExample}
                 markdown={this.state.markdown}
                 output={this.state.output}
+                updatedJson={this.state.json}
               />
             )}
           />

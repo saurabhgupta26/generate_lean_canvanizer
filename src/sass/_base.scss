@@ -1,11 +1,13 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  background: rosybrown;
+  color: #9c2531;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
   height: 100%;
 }
 .logo {
@@ -13,9 +15,9 @@ body {
   color: #8f2727;
 }
 .inner_container {
-    max-width: 1200px;
-    margin: 0 auto;
-    // height: %;
+  max-width: 1200px;
+  margin: 0 auto;
+  // height: %;
 }
 
 .container {
@@ -24,9 +26,14 @@ body {
   height: 80%;
   border: 2px solid #130a89;
   border-radius: 5px;
+  padding: 10px;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .grid {
-    margin: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -34,26 +41,23 @@ body {
     "num2 num4 num5 num9 num1"
     "num2 num7 num5 num6 num1 "
     "num8 num8 num3 num3 num3";
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 3px;
+  row-gap: 3px;
   p {
-      text-align: left;
+    text-align: left;
   }
-  padding: 20px;
+}
+.grid_last {
+  grid-template-columns: 49.9% 49.9%;
+  grid-template-areas: "num8 num3";
+  p {
+    text-align: right;
+  }
 }
 p {
-    font-size: 3.5rem;
-    font-weight: bolder;
-    opacity: 0.5;
-  }
-  
-.grid_last {
-    grid-template-columns: 49.6% 49.6%;
-    grid-template-areas: 
-    "num8 num3";
-    p {
-        text-align: right;
-    }
+  font-size: 3.5rem;
+  font-weight: bolder;
+  opacity: 0.5;
 }
 
 .grid > * {
@@ -62,11 +66,18 @@ p {
 }
 
 .inner_container > * > :first-child {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .inner_container > * > h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.inner_container > * {
+  overflow: hidden;
+}
+.grid > *:hover {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
 }
 
 .problem_section {
@@ -106,16 +117,51 @@ p {
   background: #106480;
 }
 
-
 .textfield {
-  text-align: center;
   padding: 5px;
+  margin-bottom: 20px;
 }
 .side_button button {
   width: 200px;
   font-size: 1.5rem;
   background: linear-gradient(to right, red, rgb(230, 91, 17));
-  border-radius: 5px;
-  color:#0a893f;
+  border-radius: 35px;
+  color: #9c2531;
+  border-radius: 12px;
+  background: #9eba61;
+  box-shadow: 12px 12px 17px #5dc2c7, -12px -12px 17px #c8df97;
+}
 
+.btn {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
 }

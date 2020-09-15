@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.1.2",
     "markdown-to-json": "^0.5.4",
     "markdown-to-jsx": "^7.0.0",
+    "marked": "^1.1.1",
+    "md-2-json": "^1.0.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
