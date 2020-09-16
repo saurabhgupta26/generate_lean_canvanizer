@@ -19,10 +19,10 @@ function Output(props) {
               {props.updatedJson && props.updatedJson["Lean Canvas"].Problem
                 ? props.updatedJson["Lean Canvas"].Problem.raw
                 : "N/A"}
-              <br />
+
               <p>2</p>
               <h4> Existing Alternatives </h4>
-              <br />
+
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"] &&
               props.updatedJson["Lean Canvas"].Problem &&
@@ -45,7 +45,7 @@ function Output(props) {
               {props.updatedJson && props.updatedJson["Lean Canvas"].Solution
                 ? props.updatedJson["Lean Canvas"].Solution.raw
                 : "N/A"}
-              <br />
+
               <p>4</p>
             </h2>
           </div>
@@ -58,7 +58,7 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Key Metrics"]
                 ? props.updatedJson["Lean Canvas"]["Key Metrics"].raw
                 : "N/A"}
-              <br />
+
               <p>7</p>
             </h2>
           </div>
@@ -72,10 +72,10 @@ function Output(props) {
                 ? props.updatedJson["Lean Canvas"]["Unique Value Proposition"]
                     .raw
                 : "N/A"}
-              <br />
+
               <p>5</p>
               <h4> HIGH-LEVEL CONCEPTS </h4>
-              <br />
+
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"] &&
               props.updatedJson["Lean Canvas"]["Unique Value Proposition"] &&
@@ -100,7 +100,7 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Unfair Advantage"]
                 ? props.updatedJson["Lean Canvas"]["Unfair Advantage"].raw
                 : "N/A"}
-              <br />
+
               <p>9</p>
             </h2>
           </div>
@@ -113,10 +113,10 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Customer Segments"]
                 ? props.updatedJson["Lean Canvas"]["Customer Segments"].raw
                 : "N/A"}
-              <br />
+
               <p>1</p>
               <h4> EARLY ADOPTERS </h4>
-              <br />
+
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"] &&
               props.updatedJson["Lean Canvas"]["Customer Segments"] &&
@@ -140,7 +140,7 @@ function Output(props) {
               {props.updatedJson && props.updatedJson["Lean Canvas"].Channels
                 ? props.updatedJson["Lean Canvas"].Channels.raw
                 : "N/A"}
-              <br />
+
               <p>6</p>
             </h2>
           </div>
@@ -155,7 +155,7 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Cost Structure"]
                 ? props.updatedJson["Lean Canvas"]["Cost Structure"].raw
                 : "N/A"}
-              <br />
+
               <p>8</p>
             </h2>
           </div>
@@ -168,7 +168,7 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Revenue Streams"]
                 ? props.updatedJson["Lean Canvas"]["Revenue Streams"].raw
                 : "N/A"}
-              <br />
+
               <p>3</p>
             </h2>
           </div>
