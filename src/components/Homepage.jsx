@@ -12,8 +12,7 @@ function Homepage(props) {
             <h3>Pointers before you start:</h3>
             <ul>
               <li>
-                Start the markdown with double #, i.e., ## Problem or ## Key
-                Metrics and ### for the sub menu of the business model.
+                Start the markdown with double #, i.e. ## Problem or ## Key Metrics and ### for the sub menu of the business model.
               </li>
               <li>
                 You can copy paste the data or type in, it will take the data as

@@ -5,17 +5,9 @@ import { FaKey, FaGift, FaDollarSign } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
 import { IoMdColorWand } from "react-icons/io";
 import { ImEnlarge, ImUser } from "react-icons/im";
+import {VscCircleFilled, VscCircleOutline} from "react-icons/vsc";
 
 function Output(props) {
-  // function split () {
-  //   var newLine = props.updatedJson["Lean Canvas"].Problem.raw.split("\n").map(x => {
-  //     <li>b
-  //       <h2>
-  //         {x}
-  //       </h2>
-  //     </li>
-  //   });
-  // }
   return (
     <>
       <div className="container">
@@ -24,12 +16,12 @@ function Output(props) {
             <AiFillLock />
             <h3> PROBLEM</h3>
             <section>
-              {props.updatedJson && props.updatedJson["Lean Canvas"].Problem ? (
-                props.updatedJson["Lean Canvas"].Problem.raw
-              ) : (
-                 
-                "N/A"
-              )}
+              {props.updatedJson && props.updatedJson["Lean Canvas"].Problem
+                ? props.updatedJson["Lean Canvas"].Problem.raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
+                : "N/A"}
               <p>2</p>
               <h4> Existing Alternatives </h4>
               {props.updatedJson &&
@@ -43,6 +35,9 @@ function Output(props) {
                 ? props.updatedJson["Lean Canvas"].Problem[
                     "Existing Alternatives"
                   ].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleOutline /> {elem} </h2>)
                 : "N/A"}
             </section>
           </div>
@@ -50,34 +45,44 @@ function Output(props) {
           <div className="solution_section">
             <FaKey />
             <h3>SOLUTION</h3>
-            <h2>
+            <section>
               {props.updatedJson && props.updatedJson["Lean Canvas"].Solution
                 ? props.updatedJson["Lean Canvas"].Solution.raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>4</p>
-            </h2>
+            </section>
           </div>
 
           <div className="keyMetrics_section">
             <FiBarChart2 />
             <h3>KEY METRICS</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Key Metrics"]
                 ? props.updatedJson["Lean Canvas"]["Key Metrics"].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>7</p>
-            </h2>
+            </section>
           </div>
 
           <div className="uvp_section">
             <FaGift />
             <h3>UNIQUE VALUE PROPOSITION</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Unique Value Proposition"]
-                ? props.updatedJson["Lean Canvas"]["Unique Value Proposition"]
-                    .raw
+                ? props.updatedJson["Lean Canvas"][
+                    "Unique Value Proposition"
+                  ].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>5</p>
               <h4> HIGH-LEVEL CONCEPTS </h4>
@@ -94,29 +99,38 @@ function Output(props) {
                 ? props.updatedJson["Lean Canvas"]["Unique Value Proposition"][
                     "High Level Concept"
                   ].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleOutline /> {elem} </h2>)
                 : "N/A"}
-            </h2>
+            </section>
           </div>
 
           <div className="unfairAdv_section">
             <IoMdColorWand />
             <h3>UNFAIR ADVANTAGE</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Unfair Advantage"]
                 ? props.updatedJson["Lean Canvas"]["Unfair Advantage"].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>9</p>
-            </h2>
+            </section>
           </div>
 
           <div className="custSeg_section">
             <ImUser />
             <h3>CUSTOMER SEGMENTS</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Customer Segments"]
                 ? props.updatedJson["Lean Canvas"]["Customer Segments"].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>1</p>
               <h4> EARLY ADOPTERS </h4>
@@ -133,19 +147,25 @@ function Output(props) {
                 ? props.updatedJson["Lean Canvas"]["Customer Segments"][
                     "Early Adopters"
                   ].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleOutline /> {elem} </h2>)
                 : "N/A"}
-            </h2>
+            </section>
           </div>
 
           <div className="channels_section">
             <ImEnlarge />
             <h3>CHANNELS</h3>
-            <h2>
+            <section>
               {props.updatedJson && props.updatedJson["Lean Canvas"].Channels
                 ? props.updatedJson["Lean Canvas"].Channels.raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>6</p>
-            </h2>
+            </section>
           </div>
         </div>
 
@@ -153,25 +173,31 @@ function Output(props) {
           <div className="cost_section">
             <AiFillTag />
             <h3>COST STRUCTURE</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Cost Structure"]
                 ? props.updatedJson["Lean Canvas"]["Cost Structure"].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>8</p>
-            </h2>
+            </section>
           </div>
 
           <div className="revenueStreams_section">
             <FaDollarSign />
             <h3>REVENUE STREAMS</h3>
-            <h2>
+            <section>
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"]["Revenue Streams"]
                 ? props.updatedJson["Lean Canvas"]["Revenue Streams"].raw
+                    .trim()
+                    .split("\n")
+                    .map((elem) => <h2 key={elem}> <VscCircleFilled /> {elem} </h2>)
                 : "N/A"}
               <p>3</p>
-            </h2>
+            </section>
           </div>
         </div>
       </div>

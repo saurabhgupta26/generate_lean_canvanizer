@@ -5,7 +5,7 @@ function Markdown(props) {
   return (
     <div className="">
       <div className="input_window">
-        <h2>Input Window</h2>
+        <h2 className='input_head'>Input Window</h2>
         <textarea
           className="textfield"
           name="input"

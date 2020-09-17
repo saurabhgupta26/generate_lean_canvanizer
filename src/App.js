@@ -14,13 +14,12 @@ class App extends Component {
     };
   }
   handleInput = ({ target: { name, value } }) => {
-    console.log("reached in input");
     this.setState({ markdown: value });
     this.setState({ json: md2json.parse("# Lean Canvas\n\n" + value) });
   };
   componentDidMount() {
     const altC = `## Problem
-> Platform(App) Development & Enhancement
+> Platform Development & Enhancement
 > Marketing & Customer Acquisition
 > Sales promotions to acquire new customers
 ### Existing Alternatives
@@ -72,15 +71,13 @@ class App extends Component {
 > Surge Pricing
 > Licensing Fees
 > Alternative Streams`;
-    this.setState({
-      markdown: altC,
-    });
+this.setState({
+markdown: altC,
+});
   }
-  handleClick = () => {};
-
   handleUberExample = () => {
     const example = `## Problem
-> Platform(App) Development & Enhancement
+> Platform Development & Enhancement
 > Marketing & Customer Acquisition
 > Sales promotions to acquire new customers
 ### Existing Alternatives
@@ -194,7 +191,7 @@ class App extends Component {
           <Route
             path="/"
             exact
-            render={() => <Homepage handleClick={this.handleClick} />}
+            render={() => <Homepage />}
           />
           <Route component={Error} />
         </Switch>

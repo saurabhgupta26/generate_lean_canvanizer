@@ -6,7 +6,7 @@ function Header(props) {
   return (
     <div className="flex">
       <Link className="logo" to="/">
-        <h3>Generate Lean Canvas</h3>
+        <h3>Generate Lean Canvas for Devs</h3>
       </Link>
     </div>
   );

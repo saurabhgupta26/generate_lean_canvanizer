@@ -1,9 +1,14 @@
-.inner_container > * > :first-child {
+.inner_container > * > :nth-child(2) {
   font-size: 1.2rem;
+  font-weight: 600;
 }
-.inner_container > * > h3 {
+.inner_container > * > :nth-child(1) {
+  font-size: 1.5rem;
+}
+.inner_container > * > * > h4 {
   font-size: 1rem;
   font-weight: 600;
+  text-align: left;
 }
 .inner_container > * {
   overflow: hidden;
@@ -12,11 +17,6 @@
   transform: scale(1.15);
   transition: transform 0.5s ease;
 }
-
-.grid_last > * {
-  height: 40vh;
-}
-
 .problem_section {
   grid-area: num2;
   background: #7433ab;
@@ -60,6 +60,7 @@
 
 .textfield {
   padding: 5px;
+  width: 40%;
   margin-bottom: 20px;
   font-size: 1.1rem;
   font-weight: 400;

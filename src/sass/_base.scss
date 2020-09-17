@@ -13,13 +13,14 @@ body {
 .logo {
   font-size: 2.5rem;
   color: #fff;
+  font-family: "Fredoka One", cursive;
+  word-spacing: 6px;
   text-align: center;
   font-weight: bolder;
-  background: #152F55F5;
+  background: #152f55f5;
   width: 100%;
   padding: 20px;
   text-decoration: none;
-
 }
 .inner_container {
   max-width: 1200px;
@@ -31,7 +32,6 @@ body {
   max-width: 1250px;
   margin: 0 auto;
   height: 80%;
-  // border: 2px solid #130a89;
   background: #fff;
   border-radius: 5px;
   padding: 10px;
@@ -55,7 +55,7 @@ body {
   row-gap: 3px;
   p {
     text-align: left;
-    padding-right: 10%;
+    padding-left: 20px;
   }
 }
 .grid_last {
@@ -71,16 +71,22 @@ p {
   font-weight: bolder;
   opacity: 0.5;
 }
-
 .grid > * {
   border-radius: 5px;
   padding: 5px;
 }
-.grid > * > h3, h2 {
+.grid > * > h3,
+h2 {
   padding: 10px 0;
+  text-align: left;
 }
-
 h4 {
   font-size: 1.4rem;
   font-weight: 600;
+}
+.input_head {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Fredoka One", cursive;
+  color: #152f55f5;
 }
