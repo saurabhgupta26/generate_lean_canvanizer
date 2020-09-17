@@ -7,7 +7,15 @@ import { IoMdColorWand } from "react-icons/io";
 import { ImEnlarge, ImUser } from "react-icons/im";
 
 function Output(props) {
-  console.log();
+  // function split () {
+  //   var newLine = props.updatedJson["Lean Canvas"].Problem.raw.split("\n").map(x => {
+  //     <li>b
+  //       <h2>
+  //         {x}
+  //       </h2>
+  //     </li>
+  //   });
+  // }
   return (
     <>
       <div className="container">
@@ -15,14 +23,15 @@ function Output(props) {
           <div className="problem_section">
             <AiFillLock />
             <h3> PROBLEM</h3>
-            <h2>
-              {props.updatedJson && props.updatedJson["Lean Canvas"].Problem
-                ? props.updatedJson["Lean Canvas"].Problem.raw
-                : "N/A"}
-
+            <section>
+              {props.updatedJson && props.updatedJson["Lean Canvas"].Problem ? (
+                props.updatedJson["Lean Canvas"].Problem.raw
+              ) : (
+                 
+                "N/A"
+              )}
               <p>2</p>
               <h4> Existing Alternatives </h4>
-
               {props.updatedJson &&
               props.updatedJson["Lean Canvas"] &&
               props.updatedJson["Lean Canvas"].Problem &&
@@ -35,7 +44,7 @@ function Output(props) {
                     "Existing Alternatives"
                   ].raw
                 : "N/A"}
-            </h2>
+            </section>
           </div>
 
           <div className="solution_section">
@@ -45,7 +54,6 @@ function Output(props) {
               {props.updatedJson && props.updatedJson["Lean Canvas"].Solution
                 ? props.updatedJson["Lean Canvas"].Solution.raw
                 : "N/A"}
-
               <p>4</p>
             </h2>
           </div>
@@ -58,7 +66,6 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Key Metrics"]
                 ? props.updatedJson["Lean Canvas"]["Key Metrics"].raw
                 : "N/A"}
-
               <p>7</p>
             </h2>
           </div>
@@ -72,7 +79,6 @@ function Output(props) {
                 ? props.updatedJson["Lean Canvas"]["Unique Value Proposition"]
                     .raw
                 : "N/A"}
-
               <p>5</p>
               <h4> HIGH-LEVEL CONCEPTS </h4>
 
@@ -100,7 +106,6 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Unfair Advantage"]
                 ? props.updatedJson["Lean Canvas"]["Unfair Advantage"].raw
                 : "N/A"}
-
               <p>9</p>
             </h2>
           </div>
@@ -113,7 +118,6 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Customer Segments"]
                 ? props.updatedJson["Lean Canvas"]["Customer Segments"].raw
                 : "N/A"}
-
               <p>1</p>
               <h4> EARLY ADOPTERS </h4>
 
@@ -140,7 +144,6 @@ function Output(props) {
               {props.updatedJson && props.updatedJson["Lean Canvas"].Channels
                 ? props.updatedJson["Lean Canvas"].Channels.raw
                 : "N/A"}
-
               <p>6</p>
             </h2>
           </div>
@@ -155,7 +158,6 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Cost Structure"]
                 ? props.updatedJson["Lean Canvas"]["Cost Structure"].raw
                 : "N/A"}
-
               <p>8</p>
             </h2>
           </div>
@@ -168,7 +170,6 @@ function Output(props) {
               props.updatedJson["Lean Canvas"]["Revenue Streams"]
                 ? props.updatedJson["Lean Canvas"]["Revenue Streams"].raw
                 : "N/A"}
-
               <p>3</p>
             </h2>
           </div>

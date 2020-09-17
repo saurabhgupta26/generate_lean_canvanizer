@@ -8,7 +8,6 @@ function Dashboard(props) {
   return (
     <>
       <Header />
-      {/* <h1> Generate Lean Canvas </h1> */}
       <div className="input_window">
         <Markdown
           handleInput={props.handleInput}

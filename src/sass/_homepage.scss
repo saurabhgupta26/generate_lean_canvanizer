@@ -1,0 +1,44 @@
+.custom-shape-divider-bottom-1600277376 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1600277376 svg {
+  position: relative;
+  display: block;
+  width: calc(173% + 1.3px);
+  height: 445px;
+}
+
+.custom-shape-divider-bottom-1600277376 .shape-fill {
+  fill: #152f55;
+}
+.side_panel {
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+}
+
+.display_home {
+  background: #eff7ff;
+  height: 80vh;
+  overflow-y: hidden;
+
+  h3 {
+    font-size: 1.5rem;
+    color: #111;
+    margin: 15px;
+  }
+  li {
+    font-size: 1.2rem;
+    color: #111;
+    margin: 10px;
+    text-decoration: round($number: 0);
+  }
+}
+

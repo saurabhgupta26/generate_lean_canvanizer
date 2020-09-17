@@ -35,67 +35,11 @@ function Markdown(props) {
         )}
         {!props.markdown ? (
           <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
+            AltCampus Business Model
           </button>
         ) : (
           <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            EXAMPLE
-          </button>
-        ) : (
-          <> </>
-        )}
+        )}        
       </div>
     </div>
   );

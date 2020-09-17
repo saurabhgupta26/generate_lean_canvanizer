@@ -1,8 +1,8 @@
 .inner_container > * > :first-child {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .inner_container > * > h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .inner_container > * {
@@ -20,7 +20,7 @@
 .problem_section {
   grid-area: num2;
   background: #7433ab;
-  height: 60vh;
+  // height: vh;
 }
 .solution_section {
   grid-area: num4;
@@ -63,17 +63,7 @@
   margin-bottom: 20px;
   font-size: 1.1rem;
   font-weight: 400;
-  color:#9c2531;
-}
-.side_button button {
-  width: 200px;
-  font-size: 1.5rem;
-  background: linear-gradient(to right, red, rgb(230, 91, 17));
-  border-radius: 35px;
-  color: #9c2531;
-  border-radius: 12px;
-  background: #9eba61;
-  box-shadow: 12px 12px 17px #5dc2c7, -12px -12px 17px #c8df97;
+  color:#111;
 }
 
 .btn {

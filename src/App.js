@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
 import Error from "./components/Error.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import md2json from "md-2-json";
+import Homepage from "./components/Homepage.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -17,9 +18,8 @@ class App extends Component {
     this.setState({ markdown: value });
     this.setState({ json: md2json.parse("# Lean Canvas\n\n" + value) });
   };
-handleUberExample = () => {
-  const example =
-`## Problem
+  componentDidMount() {
+    const altC = `## Problem
 > Platform(App) Development & Enhancement
 > Marketing & Customer Acquisition
 > Sales promotions to acquire new customers
@@ -71,14 +71,73 @@ handleUberExample = () => {
 > Ride Transaction Fees
 > Surge Pricing
 > Licensing Fees
-> Alternative Streams`
-  this.setState({
-    markdown: example,
-});
-}
+> Alternative Streams`;
+    this.setState({
+      markdown: altC,
+    });
+  }
+  handleClick = () => {};
+
+  handleUberExample = () => {
+    const example = `## Problem
+> Platform(App) Development & Enhancement
+> Marketing & Customer Acquisition
+> Sales promotions to acquire new customers
+### Existing Alternatives
+> Hiring Drivers
+> Customer Support
+## Solution
+> Drivers, map API providers, Lobbyists, Investors
+## Key Metrics
+> Network
+> Platform
+> Skilled Drivers
+> Technology Talent
+## Unique Value Proposition
+> For the Drivers
+> Easy to get started
+> Opportunity to earn money
+> Freedom to choose working hours
+### High Level Concept
+> For Riders
+> Safety and security
+> Lowest prices than normal taxi services
+> Easier transaction
+> Cashless Ride
+> Convienent Working
+## Unfair Advantage
+> Innovation
+> High demand and trust
+## Channels
+> Website
+> Mobile Apps 
+> Social Media
+> Word of Mouth
+> Ads
+## Customer Segments
+> People who don't own cars
+> People who can't drive a car
+> People who are looking for cost effective factors
+### Early Adopters
+> People who own a car and looking for extra income
+> People who love to drive
+> People looking for flexible work environment
+## Cost Structure
+> Customer Acquisition Cost(CAC) 
+> Legal and Settlement Costs
+> Insurance Costs
+> Research & Developments
+## Revenue Streams
+> Ride Transaction Fees
+> Surge Pricing
+> Licensing Fees
+> Alternative Streams`;
+    this.setState({
+      markdown: example,
+    });
+  };
   handleGoogleExample = () => {
-    const example = 
-`## Problem
+    const example = `## Problem
 > Irrelevant Search Results
 > Hard to find things
 ### Existing Alternatives
@@ -120,7 +179,7 @@ handleUberExample = () => {
       <BrowserRouter>
         <Switch>
           <Route
-            path="/"
+            path="/dashboard"
             exact
             render={() => (
               <Dashboard
@@ -131,6 +190,11 @@ handleUberExample = () => {
                 updatedJson={this.state.json}
               />
             )}
+          />
+          <Route
+            path="/"
+            exact
+            render={() => <Homepage handleClick={this.handleClick} />}
           />
           <Route component={Error} />
         </Switch>
