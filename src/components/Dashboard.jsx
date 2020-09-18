@@ -14,6 +14,7 @@ function Dashboard(props) {
           markdown={props.markdown}
           handleGoogleExample={props.handleGoogleExample}
           handleUberExample={props.handleUberExample}
+          handleAltCampus={props.handleAltCampus}
         />
         <Output
           // output={props.output}

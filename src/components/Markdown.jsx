@@ -5,7 +5,7 @@ function Markdown(props) {
   return (
     <div className="">
       <div className="input_window">
-        <h2 className='input_head'>Input Window</h2>
+        <h2 className="input_head">Input Window</h2>
         <textarea
           className="textfield"
           name="input"
@@ -20,6 +20,13 @@ function Markdown(props) {
       </div>
       <div className="flex">
         {!props.markdown ? (
+          <button onClick={props.handleAltCampus} className="btn first">
+            AltCampus Business Model
+          </button>
+        ) : (
+          <> </>
+        )}
+        {!props.markdown ? (
           <button onClick={props.handleGoogleExample} className="btn first">
             Google Business Model
           </button>
@@ -33,13 +40,6 @@ function Markdown(props) {
         ) : (
           <> </>
         )}
-        {!props.markdown ? (
-          <button onClick={props.handleExample} className="btn first">
-            AltCampus Business Model
-          </button>
-        ) : (
-          <> </>
-        )}        
       </div>
     </div>
   );
